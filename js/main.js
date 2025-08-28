@@ -1,5 +1,4 @@
-// Plausible Analytics
-window.plausible = window.plausible || function () { (window.plausible.q = window.plausible.q || []).push(arguments) }
+// Telemetry removed: no analytics shim
 
 // Delete link history storage if it exists, link history feature has been removed
 localStorage.removeItem('history');
@@ -35,7 +34,6 @@ function openWindow(url) {
 
 // Function for cleaning link
 function processLink(link, startMode = 'user') {
-    plausible('Clean Link');
     // Read settings
     if (localStorage.getItem('youtube-shorten-check')) {
         var youtubeShortenEnabled = JSON.parse(localStorage.getItem('youtube-shorten-check').toLowerCase());
